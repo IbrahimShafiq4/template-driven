@@ -4,7 +4,8 @@ Welcome to the Template-Driven Form Basic Project! This project will help you le
 ## Getting Started
 Install Dependencies: Run npm i to download the necessary dependencies, including node_modules and other files.
 
-## Run Development Server: Launch the development server by running ng serve -o (or ng s --o). Navigate to http://localhost:4200/ in your browser. The app will automatically reload whenever you make changes to the source files.
+## Run Development Server: 
+Launch the development server by running ng serve -o (or ng s --o). Navigate to http://localhost:4200/ in your browser. The app will automatically reload whenever you make changes to the source files.
 
 ## Covered Topics
 Throughout this project, you will cover various aspects of template-driven forms. Here's a summary of what you'll learn:
