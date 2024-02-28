@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" ngModel name="username" required #username='ngModel'>
+          </div>
+          <button class="btn btn-default" type="button" (click)="suggestUserName()">Suggest an Username</button>
+          <div class="form-group">
+            <label for="email">Mail</label>
+            <input type="email" id="email" class="form-control" [ngModel]="defaultEmail" name="email" required email
+              #email="ngModel">
+          </div>
+          <p *ngIf="email.invalid && email.touched" class="text">Please Enter a Valid Email!</p>
+        </div>
+        <p class="text" *ngIf="!userData.valid && userData.touched">
+          there is something wrong in userInput or emailInput
+        </p>
+        <div class="form-group">
+          <label for="secret">Secret Questions</label>
+          <select id="secret" class="form-control" [ngModel]="'pet'" name="secret" required #secret="ngModel">
+            <option value="pet">Your first Pet?</option>
+            <option value="teacher">Your first teacher?</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea name="questionAnswer" rows="3" [(ngModel)]="answer" class="form-control"></textarea>
+          <p>Your replay: <span [ngClass]="{'text-input': answer.length > 0}">{{ answer }}</span></p>
+        </div>
+        <div class="radio" *ngFor="let gender of genders">
+          <label>
+            <input type="radio" name="gender" [ngModel]="gender" [value]="gender">
+            {{ gender }}
+          </label>
+        </div>
+
+        <button class="btn btn-primary" style="margin-block: 10px;" type="submit" [disabled]="!f.valid">Submit</button>
+      </form>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="submitted">
+    <div class="col-xs-12">
+      <h3>Your Data</h3>
+      <p class="user-details">username: <span>{{user.username}}</span></p>
+      <p class="user-details">Mail: <span>{{user.email}}</span></p>
+      <p class="user-details">Secret Question: Your first <span>{{user.secretQuestion}}</span></p>
+      <p class="user-details">Answer: <span>{{user.answer}}</span></p>
+      <p class="user-details">Gender: <span>{{user.gender}}</span></p>
+    </div>
+  </div>
+
+</div>

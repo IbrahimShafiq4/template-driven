@@ -1,0 +1,50 @@
+.container {
+  margin-top: 30px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid #f00;
+  box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.3);
+}
+
+.text {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(255, 0, 0, 0.8);
+  font-family: 'Courier New', Courier, monospace;
+  filter: drop-shadow(0 0 1px rgba(255, 0, 0, 1));
+  transition: 0.3s linear;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea + p {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  span.text-input {
+    background-color: rgba(255, 0, 0, 1);
+    padding: 2px 5px;
+    color: #fff;
+    
+  }
+}
+
+.user-details {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-block: 20px;
+  span {
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff8400;
+  }
+}
