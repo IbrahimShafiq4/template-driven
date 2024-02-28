@@ -28,6 +28,8 @@ Throughout this project, you will cover various aspects of template-driven forms
 
 09 - Form Styling: Styling the form and its elements to provide a visually appealing and user-friendly experience.
 
+### and some other things
+
 ## By working through this project, you'll gain a solid understanding of template-driven forms in Angular and be well-equipped to build forms for your own applications.
 
 ## Feel free to customize the content further to better suit your project's needs.
